@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+      
+  <style>
+         html, body {
+         height: 75%;
+         width: 100%;
+         border: 0px;
+         margin: 0px;
+         position: relative;
+         -webkit-user-select: none !important;
+         -moz-user-select: -moz-none !important;
+         -ms-user-select: none !important;
+         user-select: none !important;
+         }
+         @font-face {
+         font-family: 'Material Icons';
+         font-style: normal;
+         font-weight: 400;
+         src: url(assets/fonts/material-icons-font.woff2) format('woff2');
+         }
+         @font-face {
+         font-family: roboto-regular;
+         src: url(assets/fonts/roboto-regular.ttf);
+         }
+         @font-face {
+         font-family: nevis-bold;
+         src: url(assets/fonts/nevis-bold.ttf);
+         }
+         #titletxt {
+         color: #00BCD4;
+         font-size: 200%;
+         font-family: nevis-bold;
+         position: relative;
+         opacity: 0;
+         width: 90%;
+         left: 10%;
+         }
+         #emailinputbox {
+         position: relative;
+         width: 76%;
+         left: 10%;
+         right: 10%;
+         border-radius: 15px;
+         opacity: 0;
+         border: 2px solid #00BCD4;
+         padding-bottom: 5px;
+         padding-left: 2%;
+         padding-right: 2%;
+         }
+         #emailinputdetail {
+         font-size: 80%;
+         width: 100%;
+         color: #00BCD4;
+         padding-top: 8px;
+         padding-left: 2px;
+         padding-bottom: 5px;
+         font-family: roboto-regular;
+         }
+         #emailinput {
+         font-size: 120%;
+         width: 100%;
+         background-color: transparent;
+         border: none;
+         outline:none;
+         color: #00BCD4;
+         font-family: roboto-regular;
+         }
+         .passwordinputbox {
+         position: relative;
+         width: 76%;
+         left: 10%;
+         right: 10%;
+         border-radius: 15px;
+         opacity: 0;
+         border: 2px solid #00BCD4;
+         padding-bottom: 5px;
+         padding-left: 2%;
+         padding-right: 2%;
+         }
+         .passwordinputdetail {
+         font-size: 80%;
+         width: 100%;
+         color: #00BCD4;
+         padding-top: 8px;
+         padding-left: 2px;
+         padding-bottom: 5px;
+         font-family: roboto-regular;
+         }
+         .passwordinput {
+         font-size: 120%;
+         width: 100%;
+         background-color: transparent;
+         border: none;
+         outline:none;
+         color: #00BCD4;
+         font-family: roboto-regular;
+         }
+         .button {
+         font-size: 130%;
+         border-radius: 25px;
+         width: 150px;
+         position: relative;
+         opacity: 0;
+         margin-left: auto;
+         margin-right: 0;
+         right: 10%;
+         background-color: #00BCD4;
+         color: white;
+         text-align: center;
+         padding: 10px;
+         font-family: nevis-bold;
+         }
+         .material-icons {
+         font-family: 'Material Icons';
+         font-weight: normal;
+         font-style: normal;
+         color: white;
+         font-size: 24px;
+         display: inline-block;
+         line-height: 1;
+         text-transform: none;
+         letter-spacing: normal;
+         word-wrap: normal;
+         white-space: nowrap;
+         direction: ltr;
+         -webkit-font-smoothing: antialiased;
+         text-rendering: optimizeLegibility;
+         -moz-osx-font-smoothing: grayscale;
+         font-feature-settings: 'liga';
+         }
+         .login-icons {
+         font-family: 'Material Icons';
+         padding-top: 4px;
+         padding-right: 4px;
+         font-size: 20px;
+         color: #00BCD4;
+         }
+  </style>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flame - Login</title>
+    
+  <div id="p5_loading" class="loadingclass" style="background-color: white;"></div>
+  <div id="animationcontainer" style="position: fixed; width: 100%; height: 100%; background: white;"></div>
+    
+  <div style="height: 5%"></div>
+  
+  <img id="flameXviper" src="assets/images/vic_flameXviper_leftsided_large.png" style="position: relative; height: 100px; left: 10%; opacity: 0"></img>
+  
+  <div style="height: 5%"></div>
+  <div id="titletxt">Login to continue</div>
+  <div style="height: 10%"></div>
+  
+  <div id="emailinputbox">
+  <div style="display: flex">
+    <span id="email-icon" class="login-icons">email</span>
+    <div id="emailinputdetail">Write your Email below</div>
+  </div>
+  <input type="email" id="emailinput">
+  </div>
+  <div style="height: 5%"></div>
+  
+  <div id="passwordinputbox" class="passwordinputbox">
+   <div style="display: flex">
+    <span id="lock-icon" class="login-icons">lock</span>
+    <div id="passwordinputdetail" class="passwordinputdetail">Write your Password below</div>
+   </div>
+    <input type="password" id="passwordinput" class="passwordinput">
+  </div>
+  
+  <div id="passdivider" style="height: 5%"></div>
+  
+  <div id="rewritepasswordinputbox" class="passwordinputbox">
+      <div style="display: flex">
+        <span id="lock-icon-2" class="login-icons">lock</span>
+        <div id="rewritepasswordinputdetail" class="passwordinputdetail">Rewrite your Password below</div>
+      </div>
+      <input type="password" id="rewritepasswordinput" class="passwordinput">
+  </div>
+
+  <div style="height: 5%"></div>
+  <div id="signbutton" class="button">Login</div>
+  <div id="divider" style="height: 75px; display: flex; opacity: 0">
+    <div style="position: relative; left: 10%; top: 60%; bottom: 50%; height: 2px;background-color: rgba(0, 188, 212, 0.5); width: calc(40% - 60px)"></div>
+    <div id="othermtdstxt" style="position: relative; top: 10%; left: 10%; color: #00bcd4; width: 120px; display: flex;justify-content: center;align-items: center; font-family: nevis-bold; ">Or Login with</div>
+    <div style="position: relative; left: 10%; top: 60%; bottom: 50%; height: 2px;background-color: rgba(0, 188, 212, 0.5); width: calc(40% - 60px)"></div>
+  </div>
+  <div style="position: relative; top: 2%; left: 10%; width: 80%; opacity: 1;">
+  <div style="width: 100%;">
+  <span id="fbbutton" class="login-icons" style="font-size: 400%;position:relative; display: flex;justify-content: center;align-items: center; opacity: 0; padding: 0; margin: 0;">facebook</span>
+  </div>
+
+    <div id="divider2" style="display: flex; opacity: 0; margin-top: 10%;">
+      <div style="position: relative; left: 10%; color: #00bcd4; width: 40px; display: flex;justify-content: center;align-items: center; font-family: nevis-bold;">OR</div>
+      <div id="changebutton" class="button">Signup</div>
+    </div>
+    
+    <div id="divider3" style="height: 75px; display: flex; opacity: 0">
+      <div style="position: relative; top: 60%; bottom: 50%; height: 2px;background-color: rgba(0, 188, 212, 0.5); width: calc(40% - 60px)"></div>
+      <div style="position: relative; top: 10%; color: #00bcd4; width: 200px; display: flex;justify-content: center;align-items: center; font-family: nevis-bold; ">Forgot your Password</div>
+      <div style="position: relative; top: 60%; bottom: 50%; height: 2px;background-color: rgba(0, 188, 212, 0.5); width: calc(40% - 60px)"></div>
+    </div>
+    
+    <div style="width: 100%;">
+      <div id="forgotpass" class="button" style="font-size: 110%; margin-left: auto; padding-left: 15px; padding-right: 15px; margin-right: auto;
+      right: 0; background-color: transparent; border: 3px solid #00bcd4; color: #00bcd4">Restore Password</span>
+    </div>
+    <div style="height: 30px">
+</body>
+
+<script src="js/third-party/firebase/firebase-app.js"></script>
+<script src="js/third-party/firebase/firebase-auth.js"></script>
+<script src="js/third-party/lottie/lottie-player.js"></script>
+<script src="js/third-party/p5/p5.min.js"></script>
+<script src="js/third-party/p5/p5.sound.min.js"></script>
+<script src="js/third-party/vanim/interpolator.js"></script>
+<script src="js/third-party/vanim/valueanimator.js"></script>
+<script src="js/third-party/snackbar/snackbar.js"></script>
+<script src="js/third-party/dialog/dialog.js"></script>
+<script src="js/src/p5.loginanim.main.js"></script>
+<script src="js/src/variables.js"></script>
+<script src="js/src/functions.js"></script>
+ <script src="js/src/sign.js"></script>
+
+</html>
